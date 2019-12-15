@@ -1,0 +1,38 @@
+@import '../../global/scss/variables';
+@import '../../global/scss/mixins';
+
+body {
+  // @include standard-body-font();
+}
+
+.text-quote {
+  font-size: 70px;
+  line-height: 1.2;
+
+  text-align: center;
+  margin: 0 auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  margin-top: 40px;
+
+  &__sans-serif {
+    font-family: $rubik-mono-one;
+    color: color(base, pink-baby);
+    width: 50vw;
+    font-size: 4.4vw;
+    margin: 0 auto;
+    color: #19354c;
+  }
+
+  &__serif {
+    font-family: default(typography, heading-font);
+    color: color(base, sky-blue);
+
+    font-size: 4.6vw;
+    letter-spacing: .5vw;
+    /* padding-left: 48px; */
+    width: 50vw;
+    margin: 0 auto;
+    font-weight: bold;
+  }
+}

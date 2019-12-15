@@ -1,0 +1,134 @@
+@mixin breakpoint($breakpoint) {
+  @media screen and (min-width: #{$breakpoint}px) {
+    @content;
+  }
+}
+
+// retrieve color from $colors map ie. `color(base, primary)`
+@function color($color-name, $color-variant:null) {
+  // color variant is optional
+  @if ($color-variant != null) {
+    // map inception
+    @return map-get(map-get($colors, $color-name), $color-variant);
+  } @else {
+    @return map-get($colors, $color-name);
+  }
+}
+
+// retrieve color from $colors map ie. `color(base, primary)`
+@function default($variable-name, $variable:null) {
+  // color variant is optional
+  @if ($variable != null) {
+    // map inception
+    @return map-get(map-get($defaults, $variable-name), $variable);
+  } @else {
+    @return map-get($defaults, $variable-name);
+  }
+}
+
+@mixin standard-body-font() {
+  font-family: default(typography, body-font);
+  color: default(typography, body-font-color);
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+@function grid-calc($column-count, $total-columns) {
+  @return ($column-count / $total-columns) * 100%;
+}
+
+@mixin grid-row() {
+  max-width: $inside-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin grid-column() {
+  width: 100%;
+  float: left;
+  padding-left: $gutter / 2;
+  padding-left: $gutter / 2;
+}
+
+@mixin row-bust() {
+  margin-left: -($gutter / 2);
+  margin-right: -($gutter / 2);
+  
+  // @include breakpoint(large) {
+    width: 100vw !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    position: relative;
+    right: 50%;
+    left: 50%;
+    // }
+    
+    // Preserve functionality of nested rows
+    .row {
+      @include grid-row();
+    }
+  }
+  
+  @mixin vertical-center() {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    .lt-ie9 & {
+      top: auto;
+      line-height: inherit;
+    }
+  }
+  
+  @mixin get-extended-grid-width($columns: 5) {
+    /*************************************************************************
+    This allows you to have an element outside of the grid that still aligns
+    with the grid
+    
+    get-extended-grid-width();
+    Gets the width of the page minus the row area and halves it to get one
+    half of the remaining width. This width is one side of the area extending
+    past the row width on the left or right.
+    Then takes the grid width minus any padding (gutter) and devides it by the
+    maximum number of columns and timeses it by number of columns the width
+    will expand accross the grid.
+    Then adds the two together. This helps the "extended-grid-width" resize
+    width the grid.
+    *************************************************************************/
+    
+    $content-width: $inside-width - $gutter;
+    $column-area: ($content-width / $column-count) * $columns;
+    
+    // (Get half the page with minus the content area) + (area inside grid)
+    width: calc( ((100% - (#{$content-width} )) / 2) + (#{$column-area}));
+  }
+  
+  @mixin clearfix {
+    &::before,
+    &::after {
+      content: ' ';
+      display: table;
+    }
+    
+    &::after {
+      clear: both;
+    }
+  }
+  
+  @mixin hide-text($display: block) {
+    display: $display;
+    overflow: hidden;
+    text-indent: -9999em;
+    line-height: 1px;
+  }
+  
+  @mixin show-for-sr() {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  

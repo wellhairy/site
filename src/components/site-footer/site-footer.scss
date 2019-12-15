@@ -1,0 +1,17 @@
+@import '../../global/scss/variables';
+@import '../../global/scss/mixins';
+
+.site-footer {
+  background: color(base, canary);;
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 1.45rem 1.0875rem;
+  }
+
+  &__heading {
+    color: white;
+    text-decoration: none;
+  }
+}

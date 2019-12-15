@@ -1,0 +1,70 @@
+@import '../../global/scss/mixins';
+
+$breakpoints: (
+  0: 0,
+  600: 600,
+  900: 900,
+  1200: 1200,
+  1440: 1200,
+  1800: 1800,
+);
+
+$colors: (
+  base: (
+    grim-grey: #ddd,
+    overcast-teal: #EEF6F8,
+    deep-sea-teal: #103a44,
+    bad-tempered-teal: #09262d,
+    pumping-mint: #89E5D6,
+    cotton-candy: #fff5f9,
+    pink-baby: #F7ACCF,
+    canary: #6495ed,
+    sky-blue: #1e90ff,
+    midnight-blue: #19354c,
+    stormy-chap: #090f63
+  )
+);
+
+$merriweather: 'Merriweather'; // sans serif 
+$rubik-mono-one: 'Rubik Mono One'; // Serif bold
+$abril-fatface: 'Abril Fatface'; // sans serif bold
+$grenze: 'Grenze'; // Gothic
+
+$defaults: (
+  typography: (
+    heading-font: #{$abril-fatface, Times, serif},
+    body-font: #{'Varela Round', helvetica, arial, sans-serif},
+    body-font-color: color(base, stormy-chap)
+  )
+);
+
+$header-sizes: (
+  small: (
+    'h1': 38.8,
+    'h2': 30.15,
+    'h3': 25.13,
+    'h4': 21,
+    'h5': 20,
+    'h6': 18,
+  ),
+  medium: (
+    'h1': 38.8,
+    'h2': 30.15,
+    'h3': 25.13,
+    'h4': 21,
+    'h5': 20,
+    'h6': 18,
+  ),
+  large: (
+    'h1': 48.8,
+    'h2': 35.15,
+    'h3': 28.13,
+    'h4': 24,
+    'h5': 20,
+    'h6': 18,
+  ),
+);
+
+$space-1: 30px;
+$margin: $space-1;
+$alpha: 0.95;

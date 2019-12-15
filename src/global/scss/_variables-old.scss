@@ -1,0 +1,58 @@
+$pink: pink;
+$body-font: helvetica, arial, sans-serif;
+
+$breakpoints: (
+  small: 0,
+  medium: 600,
+  large: 900,
+  xlarge: 1200,
+  xxlarge: 1800,
+);
+
+$colors: (
+  base: (
+    overcast-teal: #EEF6F8,
+    deep-sea-teal: #103a44,
+    bad-tempered-teal: #09262d,
+    pumping-mint: #89E5D6,
+    cotton-candy: #fff5f9,
+    pink-baby: #F7ACCF
+  )
+);
+
+    $overcast-teal: #EEF6F8;
+    $deep-sea-teal: #103a44;
+    $bad-tempered-teal: #09262d;
+    $pumping-mint: #89E5D6;
+    $cotton-candy: #fff5f9;
+    $pink-baby: #F7ACCF;
+
+$header-sizes: (
+  small: (
+    'h1': 38.8,
+    'h2': 30.15,
+    'h3': 25.13,
+    'h4': 21,
+    'h5': 20,
+    'h6': 18,
+  ),
+  medium: (
+    'h1': 38.8,
+    'h2': 30.15,
+    'h3': 25.13,
+    'h4': 21,
+    'h5': 20,
+    'h6': 18,
+  ),
+  large: (
+    'h1': 48.8,
+    'h2': 35.15,
+    'h3': 28.13,
+    'h4': 24,
+    'h5': 20,
+    'h6': 18,
+  ),
+);
+
+$margin: 30px;
+$alpha: 0.95;
