@@ -114,6 +114,7 @@
     
     @include breakpoint(1200){
       height: calc(100vh - 160px);
+      min-height: 450px;
       max-height: 100vh;
       margin-bottom: 0;
     }
