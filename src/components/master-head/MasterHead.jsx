@@ -27,7 +27,7 @@ const MasterHead = () => (
 
     <div className="master-head__area-four">   
       <div className="master-head__link-list">
-        <p>You can find me the list of links below or if you want to talk feel free to <a href="mailto:me@wellhairy.com">send me an email</a></p>
+        <p>You can find me on any of the list of links below or if you want to talk feel free to <a href="mailto:me@wellhairy.com">send me an email</a></p>
 
         <ul className="master-head__list">
           <li className="master-head__link">
