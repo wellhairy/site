@@ -24,8 +24,13 @@ const MasterHead = () => (
         <img className="master-head__img-inner" src="profile.svg" alt=""/>
       </div>  
     </div>
+ 
+    <div className="master-head__area-four">
+      <p>Research, design & front-end development. I try to stick to a basic tenet</p>
+      <p className="master-head__strap-heading"><span>Research</span> makes good ideas truly <span>great ideas</span></p>
+    </div>
 
-    <div className="master-head__area-four">   
+    <div className="master-head__area-five">   
       <div className="master-head__link-list">
         <p>You can find me on any of the list of links below or if you want to talk feel free to <a href="mailto:me@wellhairy.com">send me an email</a></p>
 

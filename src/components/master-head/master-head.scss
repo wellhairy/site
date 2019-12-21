@@ -55,7 +55,7 @@
 
     @include breakpoint(1200) {
       grid-column: column 8 / inner-end;
-      grid-row: 1 / 4;
+      grid-row: 1 / 5;
     }
   }
 
@@ -64,8 +64,18 @@
     grid-row: 3;
 
     @include breakpoint(1200) {
-      grid-column: column 2 / column 8;
+      grid-column: column 2 / column 10;
       grid-row: 2;
+    }
+  }
+
+  &__area-five {
+    grid-column: start / end;
+    grid-row: 4;
+
+    @include breakpoint(1200) {
+      grid-column: column 2 / column 8;
+      grid-row: 3;
     }
   }
 
@@ -137,6 +147,10 @@
     font-size: 40px;
 
     @include breakpoint(500){
+      font-size: 50px;
+    }
+
+    @include breakpoint(1300) {
       font-size: 70px;
     }
     
