@@ -27,7 +27,7 @@ const Pensions = () => {
     <div className={`${styles.content} ${styles.content_one}`}>
       <h3 className={styles.section_title}>Kent pensions fund</h3>
       <h4 className={styles.content_heading}>Graphics</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aliquid quos, enim voluptates, magnam ducimus itaque autem molestias, commodi animi optio beatae! Animi, et a odit dignissimos ex illum distinctio!</p>
+      {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aliquid quos, enim voluptates, magnam ducimus itaque autem molestias, commodi animi optio beatae! Animi, et a odit dignissimos ex illum distinctio!</p> */}
     </div>
 
     <Img fluid={data.imageTwo.childImageSharp.fluid} className={`${styles.img__two} ${global.no_margin_bottom}`} />
@@ -36,7 +36,7 @@ const Pensions = () => {
 
     <div className={`${styles.content} ${styles.content_two}`}>
       <h4 className={styles.content_heading}>Website</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aliquid quos, enim voluptates, magnam ducimus itaque autem molestias, commodi animi optio beatae! Animi, et a odit dignissimos ex illum distinctio!</p>
+      {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aliquid quos, enim voluptates, magnam ducimus itaque autem molestias, commodi animi optio beatae! Animi, et a odit dignissimos ex illum distinctio!</p> */}
     </div>
 
     <Img fluid={data.imageFour.childImageSharp.fluid} className={`${styles.img__four} ${global.no_margin_bottom}`} />
