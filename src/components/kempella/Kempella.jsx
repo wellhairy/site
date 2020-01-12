@@ -23,10 +23,6 @@ const Kempella = () => {
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aliquid quos, enim voluptates, magnam ducimus itaque autem molestias, commodi animi optio beatae! Animi, et a odit dignissimos ex illum distinctio!</p>
     </div>
 
-    {/* <Img fluid={data.imageOne.childImageSharp.fluid} className={`${styles.img__two} ${global.no_margin_bottom}`} /> */}
-    {/* <Img fluid={data.imageThree.childImageSharp.fluid} className={`${styles.img__one} ${global.no_margin_bottom}`} /> */}
-
-    {/* <img className={`${styles.img__two} ${global.no_margin_bottom}`} src={img2} alt="" /> */}
     <Img fluid={data.imageTwo.childImageSharp.fluid} className={`${styles.img__two} ${global.no_margin_bottom}`} />
     <img className={`${styles.img__three} ${global.no_margin_bottom}`} src={img3} alt="" />
     <img className={`${styles.img__one} ${global.no_margin_bottom}`} src={img1} alt="" />

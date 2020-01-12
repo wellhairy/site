@@ -5,7 +5,6 @@ const Footer = () => (
   <>
   <div className={styles.footer}>
     <div className={styles.footer__inner}>
-      {/* <div className={styles.footer__border}></div> */}
       
       <div className={styles.footer__content}>
         <h2>
@@ -24,7 +23,6 @@ const Footer = () => (
         </p>
       </div>
 
-      {/* <div className={`${styles.footer__border} ${global.no_margin_bottom} ${global.margin_top}`}></div> */}
     </div>
   </div>
 

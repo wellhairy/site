@@ -35,7 +35,6 @@ const Pensions = () => {
     <Img fluid={data.imageThree.childImageSharp.fluid} className={`${styles.img__three} ${global.no_margin_bottom}`} />
 
     <div className={`${styles.content} ${styles.content_two}`}>
-      {/* <h3 className={styles.content__heading}>Website</h3> */}
       <h4 className={styles.content_heading}>Website</h4>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aliquid quos, enim voluptates, magnam ducimus itaque autem molestias, commodi animi optio beatae! Animi, et a odit dignissimos ex illum distinctio!</p>
     </div>

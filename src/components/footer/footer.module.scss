@@ -24,7 +24,6 @@
   }
 
   &__content {
-    // padding: 0 50px;
     font-size: default(font-size,  medium);
 
     a:link {
@@ -68,14 +67,6 @@
       font-weight: 100;
     }
   }
-
-  // &__border {
-  //   width: 100%;
-  //   margin-bottom: 45px;
-  //   height: 10px;
-  //   background: color(base, cotton-candy);
-  //  border-radius: 10px;
-  // }
 }
 
 .list {
