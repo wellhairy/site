@@ -2,7 +2,6 @@ import React from 'react';
 import LogoImage from '../svgs/LogoImage';
 
 import "./master-head.scss";
-import "./logo-area.scss";
 
 const MasterHead = () => (
   <div className="master-head">
