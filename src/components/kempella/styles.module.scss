@@ -1,0 +1,121 @@
+@import '../../global/scss/variables';
+@import '../../global/scss/mixins';
+
+.container {
+  display: block;
+  padding: 0 20px;
+
+  @include breakpoint(500) {
+    display: grid;
+    grid-template-columns: [start] repeat(3, 1fr [column]) [end];
+    grid-template-rows: [start] repeat(3, minmax(0px, max-content) [row]) [end];
+    grid-gap: 40px;
+    width: 100%;
+    padding: 0 60px;
+  }
+
+  @include breakpoint(900) {
+    display: grid;
+    grid-template-columns: [start] repeat(16, 1fr [column]) [end];
+    grid-template-rows: [start] repeat(12, minmax(0px, max-content) [row]) [end];
+    padding: 100px 20px;
+  }
+
+  @include breakpoint(1200) {
+    padding: 100px 60px;
+  }
+}
+
+.content {
+  padding: 0 20px;
+
+  @include breakpoint(500) {
+    grid-column: start / end;
+    grid-row: 1 / 2;;
+  }
+
+  @include breakpoint(900) {
+    grid-column: start / column 7;
+    grid-row: start / row 5;
+    margin-bottom: 0;
+    padding: 0 30px;
+    text-align: right;
+  }
+
+  @include breakpoint(1400) {
+    grid-column: start / column 6;
+    padding: 30px;
+  }
+
+  &__heading{
+    font-size: 40px;
+    color: color(base, midnight-blue);
+    line-height: 1;
+    font-weight: 300;
+  
+    @include breakpoint(600){
+      font-size: 50px;
+    }
+  }
+}
+
+.img {
+  &__one {
+    width: 100%;
+
+    @include breakpoint(500) {
+      grid-column: 2 / 4;
+      grid-row: 3 / 4;
+    }
+
+    @include breakpoint(900) {
+      grid-column: 11 / column 16;
+      grid-row: row 8 / row 12;
+    }
+
+    @include breakpoint(1400) {
+      grid-column: start / column 8;
+      grid-row:  6 / row 11;
+      align-self: start;
+      justify-self: end;
+      z-index: 1;
+    }
+  }
+
+  &__two {
+    @include breakpoint(500) {
+      grid-column: start / end;
+      grid-row: 2 / 3;
+    }
+
+    @include breakpoint(900) {
+      grid-column: 8 / column 16;
+      grid-row: start / row 8;
+    }
+    
+    @include breakpoint(1400) {
+      grid-column: 7 / column 16;
+      grid-row: start / end;
+    }
+  }
+  
+  &__three {
+    width: 100%;
+    
+    @include breakpoint(500) {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
+
+    @include breakpoint(900) {
+      grid-column: 8 / column 10;
+      grid-row: row 8 / row 12;
+      width: 100%;
+    }   
+
+    @include breakpoint(1400) {
+      grid-column: 2 / column 5;
+      grid-row: row 11 / row 12;
+    }
+  }
+}

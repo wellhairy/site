@@ -5,15 +5,22 @@
   display: grid;
   grid-template-columns: [start] repeat(16, 1fr [column]) [end];
   grid-auto-rows: minmax(0px, max-content);
+  grid-auto-flow: dense;
   grid-gap: 20px;
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  padding: 30px;
+  padding: 30px 20px;
   border: 20px solid #fff;
+  grid-auto-flow: dense;
+
+  @include breakpoint(500) {
+    padding: 30px;
+  }
 
   @include breakpoint(700) {
     padding: 60px;
+    grid-auto-flow: dense;
   }
 
   &__area-one {
@@ -55,7 +62,7 @@
 
     @include breakpoint(1200) {
       grid-column: column 8 / inner-end;
-      grid-row: 1 / 4;
+      grid-row: 1 / 5;
     }
   }
 
@@ -64,8 +71,18 @@
     grid-row: 3;
 
     @include breakpoint(1200) {
-      grid-column: column 2 / column 8;
+      grid-column: column 2 / column 10;
       grid-row: 2;
+    }
+  }
+
+  &__area-five {
+    grid-column: start / end;
+    grid-row: 4;
+
+    @include breakpoint(1200) {
+      grid-column: column 2 / column 8;
+      grid-row: 3;
     }
   }
 
@@ -137,6 +154,10 @@
     font-size: 40px;
 
     @include breakpoint(500){
+      font-size: 50px;
+    }
+
+    @include breakpoint(1300) {
       font-size: 70px;
     }
     
@@ -149,5 +170,12 @@
     display: inline-block;
     background: #fff;
     padding-right: 12px;
+  }
+
+  &__graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
 }

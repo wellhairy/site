@@ -4,19 +4,26 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.0.31",
-    "gatsby-link": "^1.6.32",
+    "gatsby": "^2.18.17",
+    "gatsby-image": "^2.2.37",
     "gatsby-plugin-google-analytics": "^2.1.31",
-    "gatsby-plugin-react-helmet": "^1.0.8",
-    "gatsby-plugin-sass": "^2.0.1",
-    "gatsby-source-filesystem": "^1.5.11",
-    "gatsby-transformer-remark": "^1.7.26",
-    "node-sass": "^4.9.4",
-    "ogl": "0.0.33",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "react-router-dom": "^4.3.1",
-    "rellax": "^1.4.0"
+    "gatsby-plugin-netlify": "^2.1.30",
+    "gatsby-plugin-react-helmet": "^3.1.16",
+    "gatsby-plugin-react-svg": "^3.0.0",
+    "gatsby-plugin-sass": "^2.1.26",
+    "gatsby-plugin-sharp": "^2.3.10",
+    "gatsby-source-filesystem": "^2.1.43",
+    "gatsby-transformer-remark": "^2.6.45",
+    "gatsby-transformer-sharp": "^2.3.9",
+    "node-sass": "^4.13.0",
+    "ogl": "0.0.37",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-spring": "^8.0.27",
+    "react-typography": "^0.16.19",
+    "rellax": "^1.10.0",
+    "typography": "^0.16.19"
   },
   "keywords": [
     "gatsby"
@@ -30,6 +37,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.9.2"
+    "prettier": "^1.19.1"
   }
 }
