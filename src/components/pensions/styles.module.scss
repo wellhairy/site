@@ -1,0 +1,124 @@
+@import '../../global/scss/variables';
+@import '../../global/scss/mixins';
+
+.container {
+  padding: 100px 20px;
+
+  @include breakpoint(500) {
+    padding: 100px 60px;
+  }
+  
+  @include breakpoint(900) {
+    display: grid;
+    grid-template-columns: [start] repeat(16, 1fr [column]) [end];
+    grid-template-rows: [start] repeat(5, minmax(0px, max-content) [row]) [end];
+    grid-gap: 40px;
+    width: 100%;
+  }
+
+  @include breakpoint(1400) {
+    grid-template-rows: [start] repeat(16, minmax(0px, max-content) [row]) [end];
+  }
+}
+
+.section_title {
+  margin-bottom: 15px;
+  font-size: 40px;
+  color: color(base, midnight-blue);
+  line-height: 1;
+  font-weight: 300;
+
+  @include breakpoint(600){
+    font-size: 50px;
+  }
+}
+
+.content_heading{
+  font-size: 28px;
+}
+
+.content_one {
+  grid-column: start / end;
+  padding: 30px;
+
+  @include breakpoint(900) {
+    grid-column: start / end;
+    grid-row: 1 / 2;
+  }
+
+  @include breakpoint(1400) {
+    grid-column: start / column 6;
+    grid-row: start / row 3;
+  }
+}
+
+.content_two {
+  grid-column: start / end;
+  padding: 30px;
+
+  @include breakpoint(900) {
+    grid-column: start / end;
+    grid-row: 4 / 5;
+  }
+
+  @include breakpoint(1400) {
+    grid-column: start / column 6;
+    grid-row: row 10 / row 16;
+    text-align: right;
+  }
+}
+
+.img {
+  &__one {
+    width: 100%;
+    z-index: 1;
+
+    @include breakpoint(900) {
+      grid-column: start / column 8;
+      grid-row: 3 / 4;
+      align-self: start;
+      justify-self: end;
+    }
+
+    @include breakpoint(1400) {
+      grid-column: start / column 8;
+      grid-row: row 3 / end;
+    }
+  }
+
+  &__two {
+    @include breakpoint(900) { 
+      grid-column: start / end;
+      grid-row: 2 / 3;
+    }
+  
+    @include breakpoint(1400) {
+      grid-column: 7 / column 16;
+      grid-row: start / row 5;
+    }
+  }
+  
+  &__three {
+    @include breakpoint(900) {
+      grid-column: 7 / column 16;
+      grid-row: 3 / 4;
+    }
+  
+    @include breakpoint(1400) {
+      grid-column: 7 / column 16;
+      grid-row: row 5 / row 10;
+    }
+  }
+
+  &__four {
+    @include breakpoint(900) {
+      grid-column: start / end;
+      grid-row: 5 / 6;
+    }
+  
+    @include breakpoint(1400) {
+      grid-column: 7 / column 16;
+      grid-row: row 10 / row 16;
+    }
+  }
+}

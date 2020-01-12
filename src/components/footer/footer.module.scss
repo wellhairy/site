@@ -1,0 +1,109 @@
+@import '../../global/scss/variables';
+@import '../../global/scss/mixins';
+
+.footer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 100px 30px;
+  background: darken(color(base, stormy-chap), 10%);
+  color: color(base, cotton-candy);
+  
+  @include breakpoint(500) {display: grid;
+    grid-template-columns: 20px [start] repeat(16, 1fr [column]) [end] 20px;
+    grid-auto-rows: minmax(0, max-content);
+    grid-auto-flow: dense;
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__inner {
+    grid-column: start / end;
+    width: 100%;
+  }
+
+  &__content {
+    // padding: 0 50px;
+    font-size: default(font-size,  medium);
+
+    a:link {
+      color: color(base, cotton-candy);
+      font-weight: bold;  
+    }
+  }
+  
+  &__heading {
+    margin: 0 auto;
+    margin-bottom: 3vw;
+    position: relative;
+    top: 0;
+    transform: scale(2) translate3d(0, 0, 0);
+    transform-origin: left bottom;
+    font-family: default(typography, heading-font);
+    font-size: 7vw;
+    line-height: 1.5;
+    font-weight: 100;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+
+    span {
+      position: absolute;
+      top: 3.8vw;
+      left: -49.5vw;
+      z-index: -1;
+      color: #1c205a;
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+
+    &:first-child {
+      margin-bottom: 12vw;
+      font-size: 50px;
+      font-family: default(typography, heading-font);
+      font-weight: 100;
+    }
+  }
+
+  // &__border {
+  //   width: 100%;
+  //   margin-bottom: 45px;
+  //   height: 10px;
+  //   background: color(base, cotton-candy);
+  //  border-radius: 10px;
+  // }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 20px [start] repeat(16, 1fr [column]) [end] 20px;
+  grid-auto-rows: minmax(0, max-content);
+  grid-auto-flow: dense;
+  grid-gap: 20px;
+  width: 100%;
+  background: color(base, sky-blue);
+  margin: none;
+
+  &__inner {
+    @include clearfix;
+
+    grid-column: start / end;
+    margin: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    margin: 0;
+    padding: 20px 20px;
+    float: right;
+    
+    a:link,
+    a:visited {
+      color: color(base, stormy-chap);
+    }
+  }
+}

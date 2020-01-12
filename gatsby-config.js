@@ -3,16 +3,18 @@ const config = {
     title: `proto site`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
+        path: `${__dirname}/src`,
+        name: 'src',
       },
     },
-    `gatsby-transformer-remark`
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`, 
+    `gatsby-plugin-sharp`,
   ],
 }
 

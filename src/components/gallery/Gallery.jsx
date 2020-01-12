@@ -1,17 +1,60 @@
 import React from 'react';
+import { StaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
+import Img from "gatsby-image"
+import styles from './gallery.module.scss'
 
-const Gallery = () => (
-  <div className="gallery">
-    <img src="https://source.unsplash.com/random/800x800" alt="" className="gallery__image gallery__image-1"/>
-    <img src="https://source.unsplash.com/random/500x500" alt="" className="gallery__image gallery__image-2"/>
-    <img src="https://source.unsplash.com/random/600x600" alt="" className="gallery__image gallery__image-3"/>
-    <img src="https://source.unsplash.com/random/400x400" alt="" className="gallery__image gallery__image-4"/>
-    <img src="https://source.unsplash.com/random/800x400" alt="" className="gallery__image gallery__image-5"/>
-    <img src="https://source.unsplash.com/random/600x500" alt="" className="gallery__image gallery__image-6"/>
-    <img src="https://source.unsplash.com/random/600x600" alt="" className="gallery__image gallery__image-7"/>
-    <img src="https://source.unsplash.com/random/300x300" alt="" className="gallery__image gallery__image-8"/>
-    <img src="https://source.unsplash.com/random/500x500" alt="" className="gallery__image gallery__image-9"/>
-  </div>
-);
+export default ({ data }) => {
+  console.log(data)
+  return (
+    <>
+    <div className={styles.gallery}>
+      <div className={styles.heading}>
+        <h2 className={styles.heading__title}>and here's some "flavour"</h2>
+        {/* <p className={styles.heading__title}>and here's some "cool" stuff</p> */}
+        <p className={styles.heading__inner} aria-hidden>Work</p>
+      </div>
 
-export default Gallery;
+      <div className={styles.gallery__items}>
+        <StaticQuery query={ graphql`
+          query {
+            allMarkdownRemark {
+              edges {
+                node {
+                  id
+                  frontmatter {
+                    title
+                    featuredImage {
+                      childImageSharp {
+                        fluid(maxWidth: 800) {
+                          ...GatsbyImageSharpFluid
+                        }
+                      }
+                    }
+                  }
+                  fields {
+                    slug
+                  }
+                }
+              }
+            }
+          }
+        `}
+
+        render={data => (
+          data.allMarkdownRemark.edges.map(({ node }, index) => (
+            <div key={node.id} className={styles.gallery__image}>
+              {node.frontmatter.featuredImage ? <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} /> : ''}
+
+              <h2>
+                <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+                <span> — {`00${index}`}</span>
+              </h2>
+            </div>
+          ))
+        )}/>
+      </div>
+    </div>
+    </>
+  );
+}

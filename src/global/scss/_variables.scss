@@ -35,6 +35,13 @@ $defaults: (
     heading-font: #{$abril-fatface, Times, serif},
     body-font: #{'Varela Round', helvetica, arial, sans-serif},
     body-font-color: color(base, stormy-chap)
+  ),
+  font-size: (
+    small: 20px,
+    medium: 28px,
+    large: 35px,
+    xlarge: 50px,
+    xxlarge: 70px
   )
 );
 

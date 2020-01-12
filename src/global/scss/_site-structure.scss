@@ -8,20 +8,10 @@ body
 }
 
 body {
-  @include standard-body-font();
-
   background-color: color(base, cotton-candy);
 }
 
-
 .site-container {
   width: 100%;
-  border: 20px solid #fff;
-
-  &__page {
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 0px 1.0875rem 1.45rem;
-    padding-top: 0;
-  }
+  overflow: hidden;
 }

@@ -1,0 +1,88 @@
+@import '../../global/scss/variables';
+@import '../../global/scss/mixins';
+
+.gallery {
+  display: block;
+
+  &__items {
+    display: grid;
+    grid-template-columns: 20px [start] repeat(16, 1fr [column]) [end] 20px;
+    grid-auto-rows: minmax(0px, max-content);
+    grid-auto-flow: dense;
+    grid-gap: 20px;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 30px;
+  }
+
+  &__image {
+    grid-column: start / end;
+    width: 100%;
+    margin-bottom: 150px;
+
+    &:nth-child(1n) {
+      @include breakpoint(1200) {
+        grid-column: start / column 5;
+      }
+    }
+
+    &:nth-child(2n) {
+      @include breakpoint(1200) {
+        grid-column: column 6 / column 12;
+      }
+    }
+
+    &:nth-child(3n) {
+      @include breakpoint(1200) {
+        grid-column: column 13 / column 16;
+      }
+    }
+  }
+}
+
+
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  // margin-bottom: -12vw;
+  // padding-bottom: 10.4vw;
+  margin-bottom: -40vh;
+  padding-bottom: 40vh;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+  background: white;
+  text-align: center;
+
+  @include breakpoint(800) {
+    min-height: 580px;
+  }
+
+  &__title {
+    margin: 8vw auto;
+    position: relative;
+    z-index: 1;
+    font-family: default(typography, heading-font);
+    font-size: 70px;
+    color: color(base, story-chap);
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    transform: scale(4) translate3d(0px, 8px, 0px); // start -18px end 16px
+    font-family: "Rubik Mono One";
+    color: color(base, cotton-candy);
+    font-size: 10vw; // 8.4vw
+    line-height: 1.5;
+    font-style: italic;
+  }
+}
