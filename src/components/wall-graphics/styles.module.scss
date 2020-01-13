@@ -76,7 +76,7 @@
       justify-self: end;
     }
 
-    @include breakpoint(1400) {
+    @include breakpoint(1500) {
       grid-row: 7 / row 12;
     }
   }

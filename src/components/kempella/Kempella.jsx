@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styles from "./styles.module.scss"
 import global from "../../global/scss/global.module.scss"
@@ -20,7 +20,7 @@ const Kempella = () => {
   <div className={styles.container}>
     <div className={styles.content}>
       <h3 className={styles.content__heading}>Kempella consultancy Zambia</h3>
-      {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aliquid quos, enim voluptates, magnam ducimus itaque autem molestias, commodi animi optio beatae! Animi, et a odit dignissimos ex illum distinctio!</p> */}
+      <p>Logo & brand identity, visual style, web design and development. <Link to="https://web.archive.org/web/20161113132353/http://kempellaconsultancy.com/">Kempella</Link>, a small start up focussing on sustainable Corporate Social Responsibility through applied critical thinking in Southern Africa</p>
     </div>
 
     <Img fluid={data.imageTwo.childImageSharp.fluid} className={`${styles.img__two} ${global.no_margin_bottom}`} />

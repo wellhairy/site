@@ -27,16 +27,16 @@ const Pensions = () => {
     <div className={`${styles.content} ${styles.content_one}`}>
       <h3 className={styles.section_title}>Kent pensions fund</h3>
       <h4 className={styles.content_heading}>Graphics</h4>
-      {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aliquid quos, enim voluptates, magnam ducimus itaque autem molestias, commodi animi optio beatae! Animi, et a odit dignissimos ex illum distinctio!</p> */}
+      <p>This project needed unique visuals that fit in-line with their existing identity. The visual style needs to talk to any age or demographic. These illustrations are designed to provide visual interest and speak to a wide age group.</p>
     </div>
 
     <Img fluid={data.imageTwo.childImageSharp.fluid} className={`${styles.img__two} ${global.no_margin_bottom}`} />
     <Img fluid={data.imageOne.childImageSharp.fluid} className={`${styles.img__one} ${global.no_margin_bottom}`} />
-    <Img fluid={data.imageThree.childImageSharp.fluid} className={`${styles.img__three} ${global.no_margin_bottom}`} />
+    <Img fluid={data.imageThree.childImageSharp.fluid} objectFit="scale-down" className={`${styles.img__three} ${global.no_margin_bottom}`} />
 
     <div className={`${styles.content} ${styles.content_two}`}>
       <h4 className={styles.content_heading}>Website</h4>
-      {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aliquid quos, enim voluptates, magnam ducimus itaque autem molestias, commodi animi optio beatae! Animi, et a odit dignissimos ex illum distinctio!</p> */}
+      <p>This work lead to the development of a functional website with a focus on the user. The design was based an initial piece of work that identified key outcomes for stakeholders to support business and user needs</p>
     </div>
 
     <Img fluid={data.imageFour.childImageSharp.fluid} className={`${styles.img__four} ${global.no_margin_bottom}`} />

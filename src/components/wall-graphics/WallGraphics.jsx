@@ -23,7 +23,7 @@ const WallGraphics = () => {
   <div className={styles.container}>
     <div className={styles.content}>
       <h3 className={styles.content__heading}>Kent contact center wall graphics</h3>
-      {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aliquid quos, enim voluptates, magnam ducimus itaque autem molestias, commodi animi optio beatae! Animi, et a odit dignissimos ex illum distinctio!</p> */}
+      <p>A super fun piece of work - large format wall graphics designed to inspire employes after the re-commissioning of the Kent contact center. These graphics where produced in partnership with contact centre staff. The idea used Kent landmarks and historical buildings to create a unique design individual to kent and the people who worked in the contact centre.</p>
     </div>
 
     <Img fluid={data.imageOne.childImageSharp.fluid} className={`${styles.img} ${styles.img__one}`} />
