@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "wellhairy-portfolio-site",
+  "description": "Wellhairy design portfolio site",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Allan King <hi@wellhairy.com>",
   "dependencies": {
     "gatsby": "^2.18.17",
     "gatsby-image": "^2.2.37",
