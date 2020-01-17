@@ -21,17 +21,15 @@ const config = {
         name: `Wellhairy design - Allan King`,
         short_name: `wellhairy-design`,
         start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
         display: `standalone`,
-        icon: `static/favicon.png`,
+        icon: `static/favicon.svg`,
       },
     },
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        precachePages: [`/index/`, `/gallery/*`],
+        precachePages: [`/index/`],
       }
     },
   ],
