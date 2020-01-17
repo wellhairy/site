@@ -13,8 +13,25 @@ const config = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`, 
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Wellhairy design - Allan King`,
+        short_name: `wellhairy-design`,
+        start_url: `/`,
+        display: `standalone`,
+        icon: `static/favicon.svg`,
+      },
+    },
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/index/`],
+      }
+    },
   ],
 }
 

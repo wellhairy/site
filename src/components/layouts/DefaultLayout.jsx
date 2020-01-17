@@ -8,7 +8,7 @@ export default ({ children }) => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>Wellhairy design - Allan King</title>
-      <link rel="icon" href="favicon.png"></link>
+      {/* <link rel="icon" href="favicon.png" /> */}
       <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet"></link>
       <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet"></link>
       <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet"></link>
