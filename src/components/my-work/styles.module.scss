@@ -7,6 +7,11 @@
   &__items {
     display: block;
     padding: 0;
+
+    @include breakpoint(1800) {
+      max-width: 1800px;
+      margin: 0 auto;
+    }
   }
 }
 

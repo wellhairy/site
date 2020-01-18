@@ -6,7 +6,6 @@
   grid-template-columns: [start] repeat(16, 1fr [column]) [end];
   grid-auto-rows: minmax(0px, max-content);
   grid-auto-flow: dense;
-  grid-gap: 20px;
   width: 100%;
   overflow: hidden;
   padding: 30px 20px;
@@ -15,6 +14,7 @@
 
   @include breakpoint(500) {
     padding: 30px;
+    grid-gap: 20px;
   }
 
   @include breakpoint(700) {
@@ -41,6 +41,7 @@
   &__area-two {
     grid-column: start / end;
     grid-row: 1;
+    margin-bottom: $space-3;
 
     @include breakpoint(500) {
       grid-column: column 5 / end;
@@ -172,7 +173,7 @@
   }
 
   &__bg-graphic {
-    width: 120%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
