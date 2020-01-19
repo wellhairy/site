@@ -25,15 +25,16 @@ $colors: (
   )
 );
 
-$merriweather: 'Merriweather'; // sans serif 
-$rubik-mono-one: 'Rubik Mono One'; // Serif bold
+// $merriweather: 'Merriweather'; // sans serif 
+// $rubik-mono-one: 'Rubik Mono One'; // Serif bold
+// $grenze: 'Grenze'; // Gothic
+$varela-round: 'Varela Round';
 $abril-fatface: 'Abril Fatface'; // sans serif bold
-$grenze: 'Grenze'; // Gothic
 
 $defaults: (
   typography: (
     heading-font: #{$abril-fatface, Times, serif},
-    body-font: #{'Varela Round', helvetica, arial, sans-serif},
+    body-font: #{$varela-round, helvetica, arial, sans-serif},
     body-font-color: color(base, stormy-chap)
   ),
   font-size: (

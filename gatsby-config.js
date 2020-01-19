@@ -32,6 +32,16 @@ const config = {
         precachePages: [`/index/`],
       }
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Abril Fatface\:400`,
+          `Varela Round\:400`
+        ],
+        display: 'swap'
+      }
+    }
   ],
 }
 
