@@ -130,7 +130,7 @@
     background: color(base, pink-baby);
     
     @include breakpoint(1200){
-      height: calc(100vh - 160px);
+      height: 100%;
       min-height: 450px;
       max-height: 100vh;
       margin-bottom: 0;
